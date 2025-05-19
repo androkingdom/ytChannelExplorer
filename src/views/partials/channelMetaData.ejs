@@ -1,0 +1,29 @@
+<div class="flex items-center gap-4">
+    <img src="<%= channelData.logoUrl %>" alt="Channel Picture" class="rounded-full w-16 h-16" />
+    <div>
+        <h2 class="text-xl font-bold">
+            <%= channelData.title %>
+        </h2>
+        <p class="text-sm text-gray-300">
+            <%= channelData.description || 'No description available.' %>
+        </p>
+    </div>
+</div>
+<div class="mt-4 space-y-1 text-gray-200">
+    <p><strong>Subscribers:</strong>
+        <%= channelData.subscriberCount %>
+    </p>
+    <p><strong>Videos:</strong>
+        <%= channelData.videoCount %>
+    </p>
+    <p><strong>Total Views:</strong>
+        <%= channelData.viewCount %>
+    </p>
+</div>
+<h3 class="text-lg font-semibold text-red-300 mt-6 mb-2">Latest Videos</h3>
+
+<ul class="flex flex-col gap-4">
+    <li class="w-full">
+        <%- include("LatestVideos", { videos: locals.LatestVideos }) %>
+    </li>
+</ul>

@@ -1,0 +1,11 @@
+<% if (LatestVideos.length===0) { %>
+    <p class="text-gray-300">No videos found for this channel.</p>
+    <% } else { %>
+        <ul class="flex flex-col gap-4">
+            <% LatestVideos.forEach((singleVideo)=> { %>
+                <li class="w-full cursor-pointer" onclick="window.open(`https://www.youtube.com/watch?v=<%= singleVideo.id %>`, '_blank')">
+                    <%- include("LatestVideoCard", { singleVideo }) %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>

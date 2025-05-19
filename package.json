@@ -1,0 +1,22 @@
+{
+  "name": "ytchannelexplorer",
+  "version": "1.0.0",
+  "description": "YouTube Channel Explorer",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config app.js",
+    "start": "node -r dotenv/config app.js"
+  },
+  "keywords": [],
+  "author": "Anshul, Rishabh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
